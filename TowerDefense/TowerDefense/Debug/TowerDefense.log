@@ -1,0 +1,16 @@
+﻿  BoxCollider.cpp
+  Button.cpp
+c:\towerdefense\towerdefense\towerdefense\button.cpp(30): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\towerdefense\towerdefense\towerdefense\button.cpp(31): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\towerdefense\towerdefense\towerdefense\button.cpp(34): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\towerdefense\towerdefense\towerdefense\button.cpp(43): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\towerdefense\towerdefense\towerdefense\button.cpp(44): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\towerdefense\towerdefense\towerdefense\button.cpp(45): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  CollisionManager.cpp
+  Engine.cpp
+  LevelCreationState.cpp
+  MainMenuState.cpp
+  Menu.cpp
+c:\towerdefense\towerdefense\towerdefense\menu.cpp(79): warning C4018: '<': signed/unsigned mismatch
+  Generating Code...
+  TowerDefense.vcxproj -> C:\TowerDefense\TowerDefense\Debug\TowerDefense.exe

@@ -1,0 +1,327 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Source Files\Core">
+      <UniqueIdentifier>{5d32fb83-a3e0-4f49-a9fc-dbefc76b582c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Core">
+      <UniqueIdentifier>{32d3cb52-785d-4453-9b9f-6e8ffa8497c7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Components">
+      <UniqueIdentifier>{0337fff0-e0c8-4e32-aa8d-be13e3c6ddab}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Components">
+      <UniqueIdentifier>{448862fd-b6fe-438b-8c43-c5428086e5fb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Rendering">
+      <UniqueIdentifier>{25dbd14e-5034-48cc-876a-e545625265e3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Rendering">
+      <UniqueIdentifier>{0b5ee802-dc18-45f6-aaba-07b4afb16420}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\ExternalHeaders">
+      <UniqueIdentifier>{d46f79c2-d547-4529-a90b-e837d18234a2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Grid">
+      <UniqueIdentifier>{3a866bff-b927-4db8-83aa-67575fd8ad45}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Shapes">
+      <UniqueIdentifier>{c2df9fb3-8dc9-45cc-a312-7d2e6297f242}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Shapes">
+      <UniqueIdentifier>{e8c267f3-ddee-453c-9fd2-0e2db3edf4b9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Grid">
+      <UniqueIdentifier>{50058418-0bf4-4a84-9fb4-8cc6caf00f4f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\ObjectPool">
+      <UniqueIdentifier>{8ec603cc-cf81-4bea-94fa-8ef47c87a111}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\ObjectPool">
+      <UniqueIdentifier>{4a4690b8-2091-4679-a8c7-4164aebc23d8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\StateMachine">
+      <UniqueIdentifier>{8f8a8867-313d-4a13-b09f-bb29ca8703d7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\StateMachine">
+      <UniqueIdentifier>{974987af-2785-4dfe-b438-a635ec3036de}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\StateMachine\States">
+      <UniqueIdentifier>{c8e1c7e9-8c05-49c7-81d0-c12a81337c6b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\StateMachine\States">
+      <UniqueIdentifier>{68d9207d-18dd-4cb8-8026-c16a1df98c9f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Input">
+      <UniqueIdentifier>{a1d8158f-d10f-4432-bbbc-eaed0e4e0cf1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Input">
+      <UniqueIdentifier>{efb51961-547e-4fd9-9386-7a79ab72c889}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Input\Commands">
+      <UniqueIdentifier>{24f70297-d283-476f-a2b7-b492b3be43c2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Input\Commands">
+      <UniqueIdentifier>{f5bd0f22-beff-48be-a3be-03cf5e3ba262}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Menu">
+      <UniqueIdentifier>{1a4e3bc0-c8f4-45bd-b02d-5a3af85a4a58}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Menu">
+      <UniqueIdentifier>{27e02a23-7aae-46d8-be5c-c0455bcbc7b3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\LevelManagement">
+      <UniqueIdentifier>{ba9decd7-6372-4408-a937-8c72b8a351a5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\LevelManagement">
+      <UniqueIdentifier>{48a3b08a-80c9-4aa9-9b47-80b942d15543}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Collision">
+      <UniqueIdentifier>{40d4040c-4261-482e-8256-91a9579e58a2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Collision">
+      <UniqueIdentifier>{f6510496-f04a-4423-8082-8942da66a674}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Collision\Colliders">
+      <UniqueIdentifier>{b03f1551-f5b1-4f70-9b53-e312ec47b686}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Collision\Colliders">
+      <UniqueIdentifier>{84aa4c39-9ea4-4e30-abae-b01336f07533}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="stdafx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Display.h">
+      <Filter>Header Files\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine.h">
+      <Filter>Header Files\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="SDLInit.h">
+      <Filter>Header Files\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Window.h">
+      <Filter>Header Files\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Component.h">
+      <Filter>Header Files\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Sprite.h">
+      <Filter>Header Files\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="GameObject.h">
+      <Filter>Header Files\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Surface.h">
+      <Filter>Header Files\Rendering</Filter>
+    </ClInclude>
+    <ClInclude Include="Texture.h">
+      <Filter>Header Files\Rendering</Filter>
+    </ClInclude>
+    <ClInclude Include="Renderer.h">
+      <Filter>Header Files\Rendering</Filter>
+    </ClInclude>
+    <ClInclude Include="SpriteManager.h">
+      <Filter>Header Files\Rendering</Filter>
+    </ClInclude>
+    <ClInclude Include="ServiceLocator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="json.hpp">
+      <Filter>Header Files\ExternalHeaders</Filter>
+    </ClInclude>
+    <ClInclude Include="Grid.h">
+      <Filter>Header Files\Grid</Filter>
+    </ClInclude>
+    <ClInclude Include="DrawManager.h">
+      <Filter>Header Files\Rendering</Filter>
+    </ClInclude>
+    <ClInclude Include="Plane.h">
+      <Filter>Header Files\Shapes</Filter>
+    </ClInclude>
+    <ClInclude Include="Vec2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GridTile.h">
+      <Filter>Header Files\Grid</Filter>
+    </ClInclude>
+    <ClInclude Include="Poolable.h">
+      <Filter>Header Files\ObjectPool</Filter>
+    </ClInclude>
+    <ClInclude Include="TestPoolObject.h">
+      <Filter>Header Files\ObjectPool</Filter>
+    </ClInclude>
+    <ClInclude Include="StateMachine.h">
+      <Filter>Header Files\StateMachine</Filter>
+    </ClInclude>
+    <ClInclude Include="State.h">
+      <Filter>Header Files\StateMachine</Filter>
+    </ClInclude>
+    <ClInclude Include="LevelCreationState.h">
+      <Filter>Header Files\StateMachine\States</Filter>
+    </ClInclude>
+    <ClInclude Include="InputManager.h">
+      <Filter>Header Files\Input</Filter>
+    </ClInclude>
+    <ClInclude Include="Command.h">
+      <Filter>Header Files\Input\Commands</Filter>
+    </ClInclude>
+    <ClInclude Include="Up.h">
+      <Filter>Header Files\Input\Commands</Filter>
+    </ClInclude>
+    <ClInclude Include="Down.h">
+      <Filter>Header Files\Input\Commands</Filter>
+    </ClInclude>
+    <ClInclude Include="Enter.h">
+      <Filter>Header Files\Input\Commands</Filter>
+    </ClInclude>
+    <ClInclude Include="Menu.h">
+      <Filter>Header Files\Menu</Filter>
+    </ClInclude>
+    <ClInclude Include="Button.h">
+      <Filter>Header Files\Menu</Filter>
+    </ClInclude>
+    <ClInclude Include="MainMenuState.h">
+      <Filter>Header Files\StateMachine\States</Filter>
+    </ClInclude>
+    <ClInclude Include="LevelManager.h">
+      <Filter>Header Files\LevelManagement</Filter>
+    </ClInclude>
+    <ClInclude Include="BoxCollider.h">
+      <Filter>Header Files\Collision\Colliders</Filter>
+    </ClInclude>
+    <ClInclude Include="CollisionManager.h">
+      <Filter>Header Files\Collision</Filter>
+    </ClInclude>
+    <ClInclude Include="Editable.h">
+      <Filter>Header Files\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjectPool.h">
+      <Filter>Header Files\ObjectPool</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine.cpp">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Window.cpp">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="SDLInit.cpp">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Display.cpp">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Component.cpp">
+      <Filter>Source Files\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="Sprite.cpp">
+      <Filter>Source Files\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="GameObject.cpp">
+      <Filter>Source Files\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="Surface.cpp">
+      <Filter>Source Files\Rendering</Filter>
+    </ClCompile>
+    <ClCompile Include="Texture.cpp">
+      <Filter>Source Files\Rendering</Filter>
+    </ClCompile>
+    <ClCompile Include="Renderer.cpp">
+      <Filter>Source Files\Rendering</Filter>
+    </ClCompile>
+    <ClCompile Include="SpriteManager.cpp">
+      <Filter>Source Files\Rendering</Filter>
+    </ClCompile>
+    <ClCompile Include="Grid.cpp">
+      <Filter>Source Files\Grid</Filter>
+    </ClCompile>
+    <ClCompile Include="DrawManager.cpp">
+      <Filter>Source Files\Rendering</Filter>
+    </ClCompile>
+    <ClCompile Include="Plane.cpp">
+      <Filter>Source Files\Shapes</Filter>
+    </ClCompile>
+    <ClCompile Include="Vec2.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GridTile.cpp">
+      <Filter>Source Files\Grid</Filter>
+    </ClCompile>
+    <ClCompile Include="Poolable.cpp">
+      <Filter>Source Files\ObjectPool</Filter>
+    </ClCompile>
+    <ClCompile Include="TestPoolObject.cpp">
+      <Filter>Source Files\ObjectPool</Filter>
+    </ClCompile>
+    <ClCompile Include="StateMachine.cpp">
+      <Filter>Source Files\StateMachine</Filter>
+    </ClCompile>
+    <ClCompile Include="State.cpp">
+      <Filter>Source Files\StateMachine</Filter>
+    </ClCompile>
+    <ClCompile Include="LevelCreationState.cpp">
+      <Filter>Source Files\StateMachine\States</Filter>
+    </ClCompile>
+    <ClCompile Include="InputManager.cpp">
+      <Filter>Source Files\Input</Filter>
+    </ClCompile>
+    <ClCompile Include="Command.cpp">
+      <Filter>Source Files\Input\Commands</Filter>
+    </ClCompile>
+    <ClCompile Include="Up.cpp">
+      <Filter>Source Files\Input\Commands</Filter>
+    </ClCompile>
+    <ClCompile Include="Down.cpp">
+      <Filter>Source Files\Input\Commands</Filter>
+    </ClCompile>
+    <ClCompile Include="Enter.cpp">
+      <Filter>Source Files\Input\Commands</Filter>
+    </ClCompile>
+    <ClCompile Include="Menu.cpp">
+      <Filter>Source Files\Menu</Filter>
+    </ClCompile>
+    <ClCompile Include="Button.cpp">
+      <Filter>Source Files\Menu</Filter>
+    </ClCompile>
+    <ClCompile Include="MainMenuState.cpp">
+      <Filter>Source Files\StateMachine\States</Filter>
+    </ClCompile>
+    <ClCompile Include="LevelManager.cpp">
+      <Filter>Source Files\LevelManagement</Filter>
+    </ClCompile>
+    <ClCompile Include="BoxCollider.cpp">
+      <Filter>Source Files\Collision\Colliders</Filter>
+    </ClCompile>
+    <ClCompile Include="CollisionManager.cpp">
+      <Filter>Source Files\Collision</Filter>
+    </ClCompile>
+    <ClCompile Include="Editable.cpp">
+      <Filter>Source Files\Components</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
