@@ -7,8 +7,12 @@ class Surface
 public:
 	Surface(std::string p_filePath);
 	~Surface();
-	SDL_Surface* GetSurface();
+
+	//Surface(const Surface& p_other);
+
+	SDL_Surface* GetSurface() const;
 private:
+	std::string _filePath;
 	SDL_Surface * _surface;
 };
 

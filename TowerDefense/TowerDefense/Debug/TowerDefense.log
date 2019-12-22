@@ -1,16 +1,61 @@
-﻿  BoxCollider.cpp
-  Button.cpp
+﻿  Button.cpp
 c:\towerdefense\towerdefense\towerdefense\button.cpp(30): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
 c:\towerdefense\towerdefense\towerdefense\button.cpp(31): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
 c:\towerdefense\towerdefense\towerdefense\button.cpp(34): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
 c:\towerdefense\towerdefense\towerdefense\button.cpp(43): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
 c:\towerdefense\towerdefense\towerdefense\button.cpp(44): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
 c:\towerdefense\towerdefense\towerdefense\button.cpp(45): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-  CollisionManager.cpp
+  Command.cpp
+  Down.cpp
+  DrawManager.cpp
   Engine.cpp
+  Enter.cpp
+  FileManager.cpp
+  Font.cpp
+  GameObject.cpp
+  GameObjectManager.cpp
+  Grid.cpp
+c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.16.27023\include\memory(1801): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+  c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.16.27023\include\memory(1865): note: see reference to function template instantiation 'std::_Ref_count_obj<_Ty>::_Ref_count_obj<std::string&,float&,float&,int>(std::string &,float &,float &,int &&)' being compiled
+          with
+          [
+              _Ty=GridTile
+          ]
+  c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.16.27023\include\memory(1866): note: see reference to function template instantiation 'std::_Ref_count_obj<_Ty>::_Ref_count_obj<std::string&,float&,float&,int>(std::string &,float &,float &,int &&)' being compiled
+          with
+          [
+              _Ty=GridTile
+          ]
+  c:\towerdefense\towerdefense\towerdefense\grid.cpp(31): note: see reference to function template instantiation 'std::shared_ptr<GridTile> std::make_shared<GridTile,std::string&,float&,float&,int>(std::string &,float &,float &,int &&)' being compiled
+c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.16.27023\include\memory(1801): warning C4244: 'argument': conversion from '_Ty' to 'int', possible loss of data
+          with
+          [
+              _Ty=float
+          ]
+  c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.16.27023\include\memory(1865): note: see reference to function template instantiation 'std::_Ref_count_obj<_Ty>::_Ref_count_obj<std::string&,float,float,int>(std::string &,float &&,float &&,int &&)' being compiled
+          with
+          [
+              _Ty=GridTile
+          ]
+  c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.16.27023\include\memory(1866): note: see reference to function template instantiation 'std::_Ref_count_obj<_Ty>::_Ref_count_obj<std::string&,float,float,int>(std::string &,float &&,float &&,int &&)' being compiled
+          with
+          [
+              _Ty=GridTile
+          ]
+  c:\towerdefense\towerdefense\towerdefense\grid.cpp(51): note: see reference to function template instantiation 'std::shared_ptr<GridTile> std::make_shared<GridTile,std::string&,float,float,int>(std::string &,float &&,float &&,int &&)' being compiled
+  GridTile.cpp
   LevelCreationState.cpp
   MainMenuState.cpp
   Menu.cpp
-c:\towerdefense\towerdefense\towerdefense\menu.cpp(79): warning C4018: '<': signed/unsigned mismatch
+  Renderer.cpp
+  Sprite.cpp
+  SpriteManager.cpp
+  Surface.cpp
+  TextManager.cpp
   Generating Code...
+  Compiling...
+  Texture.cpp
+  Up.cpp
+  Generating Code...
+  main.cpp
   TowerDefense.vcxproj -> C:\TowerDefense\TowerDefense\Debug\TowerDefense.exe

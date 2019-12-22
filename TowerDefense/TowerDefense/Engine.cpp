@@ -6,7 +6,15 @@
 #include "MainMenuState.h"
 #include "CollisionManager.h"
 
+
+
 #include "Vec2.h"
+
+#include "FileManager.h"
+
+/*TEMPINCLUDE*/
+#include "Font.h"
+
 
 Engine::Engine() :
 	
@@ -21,26 +29,34 @@ Engine::Engine() :
 
 	ServiceLocator<SpriteManager>::SetService(_spriteManager);
 	ServiceLocator<DrawManager>::SetService(_drawManager);
+	ServiceLocator<Renderer>::SetService(_renderer);
 
 	//Vec2 gridPos(10.0f, 10.0f);
 	//Grid* _grid = new Grid(gridPos, 33, 24);
 	//_grid->InitGrid();
 
-	LevelManager* levelManager = new LevelManager();
-	std::shared_ptr<MainMenuState> mainMenuState = std::make_shared<MainMenuState>(_inputManager,_spriteManager,_drawManager,levelManager, collisionManager);
-	std::shared_ptr<LevelCreationState> levelCreationState = std::make_shared<LevelCreationState>(_inputManager,_spriteManager, _drawManager, collisionManager);
+	FileManager* fileManager = new FileManager();
+	//fileManager.SaveGrid("Grid");
+	//fileManager.LoadGrid("Level.json");
 
-	//The member functions become null when we add the states, for some fucking reason.
-	//I have no fucking idea.
+	LevelManager* levelManager = new LevelManager();
+	std::shared_ptr<MainMenuState> mainMenuState = std::make_shared<MainMenuState>(_inputManager,_spriteManager,_drawManager,levelManager, collisionManager, fileManager);
+	std::shared_ptr<LevelCreationState> levelCreationState = std::make_shared<LevelCreationState>(_inputManager,_spriteManager, _drawManager, collisionManager, fileManager);
+
 	levelManager->AddLevel("MainMenu", mainMenuState);
 	levelManager->AddLevel("LevelCreation", levelCreationState);
 	levelManager->TransitionToLevel("MainMenu");
 
+	Font font("../External/fonts/FreeSans.ttf", 8);
+
+
 	while (levelManager->GetIsRunning() )
 	{
+
 		_drawManager->Draw();
 		levelManager->Update();
 		levelManager->Draw();
+		font.Draw();
 		_drawManager->Present();
 		_inputManager->PollEvents(); //need to poll for sdl_quit.
 	}

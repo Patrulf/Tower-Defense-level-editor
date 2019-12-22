@@ -7,15 +7,18 @@
 #include "Menu.h"
 #include "LevelManager.h"
 #include "CollisionManager.h"
+#include "FileManager.h"
 
 MainMenuState::MainMenuState(InputManager* p_inputManager, SpriteManager* p_spriteManager, 
-	DrawManager* p_drawManager, LevelManager* p_levelManager, CollisionManager* p_collisionManager)
+	DrawManager* p_drawManager, LevelManager* p_levelManager, CollisionManager* p_collisionManager,
+	FileManager* p_fileManager)
 {
 	collisionManager = p_collisionManager;
 	spriteManager = p_spriteManager;
 	drawManager = p_drawManager;
 	levelManager = p_levelManager;
 	inputManager = p_inputManager;
+	fileManager = p_fileManager;
 }
 
 MainMenuState::~MainMenuState()

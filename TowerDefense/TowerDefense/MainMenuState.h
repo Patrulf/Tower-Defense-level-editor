@@ -4,6 +4,7 @@
 class DrawManager;
 class SpriteManager;
 class InputManager;
+class FileManager;
 
 class Menu;
 class LevelManager;
@@ -13,7 +14,7 @@ class MainMenuState : public State
 {
 public:
 	MainMenuState(InputManager* p_inputManager, SpriteManager* p_spriteManager, DrawManager* p_drawManager,
-		LevelManager* p_levelManager, CollisionManager* p_collisionManager);
+		LevelManager* p_levelManager, CollisionManager* p_collisionManager, FileManager* p_fileManager);
 	~MainMenuState();
 
 	void Draw();
@@ -32,5 +33,6 @@ private:
 	InputManager* inputManager;
 	Menu* menu;
 	LevelManager* levelManager;
+	FileManager* fileManager;
 };
 

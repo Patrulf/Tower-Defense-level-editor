@@ -27,31 +27,56 @@ Command* InputManager::HandleMouseInput(Uint8 p_mouseButton) {
 	return nullptr;
 }
 
-Command* InputManager::HandleKeyboardInput(SDL_Scancode p_scanCode) { 
-	
+Command* InputManager::HandleKeyboardInput(SDL_Scancode p_scanCode, bool p_isKeyPress) { 
 	auto it = events.find(p_scanCode);
 
-	if (it != events.end() && it->second.type == SDL_KEYDOWN) {
-		if (p_scanCode == SDL_SCANCODE_UP) {
-			return up.get();
-		}
-		if (p_scanCode == SDL_SCANCODE_DOWN) {
-			return down.get();
-		}
-		if (p_scanCode == SDL_SCANCODE_RETURN) {
-			return enter.get();
+	//problem is it registers keypress down once for a couple of seconds, so my suggestion is to
+	//remove the keypress from the list if we have a down once.
+
+	if (it != events.end() && it->second.event.type == SDL_KEYDOWN) {
+		if ((p_isKeyPress == true && it->second.isKeyPress == true) || p_isKeyPress == false) {
+			it->second.isKeyPress = false;
+			if (p_scanCode == SDL_SCANCODE_UP) {
+				return up.get();
+			}
+			if (p_scanCode == SDL_SCANCODE_DOWN || p_scanCode == SDL_SCANCODE_TAB) {
+				return down.get();
+			}
+			if (p_scanCode == SDL_SCANCODE_RETURN) {
+				return enter.get();
+			}
 		}
 	}
 	return nullptr;
 }
 
 void InputManager::PollEvents(){
-	events.clear();
 	mouseEvents.clear();
 	SDL_Event event;
 	while (SDL_PollEvent(&event) != 0) {
-		if (event.type == SDL_KEYDOWN)
-			events.insert(std::pair<SDL_Scancode, SDL_Event>(event.key.keysym.scancode,event));
+		if (event.type == SDL_KEYDOWN) {
+			auto it = events.find(event.key.keysym.scancode);
+			KeyboardEvent keyboardEvent;
+			if (it != events.end()) {				
+				it->second.event = event;
+				it->second.isKeyPress = false;
+				//std::cout << "We are now adding an event for holding down the key \n";
+			}
+			else if (it == events.end() )
+			{
+				//std::cout << "We are now adding an event for pressing the key once \n";
+				keyboardEvent.event = event;
+				keyboardEvent.isKeyPress = true;
+				events.insert(std::pair<SDL_Scancode, KeyboardEvent>(event.key.keysym.scancode, keyboardEvent));
+			}
+			
+		}			
+		if (event.type == SDL_KEYUP) {
+			auto it = events.find(event.key.keysym.scancode);
+			if (it != events.end()) {
+				events.erase(event.key.keysym.scancode);
+			}
+		}			
 		if (event.type == SDL_MOUSEBUTTONDOWN)
 			mouseEvents.insert(std::pair<Uint8, SDL_Event>(event.button.button, event));
 	};

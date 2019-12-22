@@ -100,6 +100,21 @@
     <Filter Include="Source Files\Collision\Colliders">
       <UniqueIdentifier>{84aa4c39-9ea4-4e30-abae-b01336f07533}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Rendering\Text">
+      <UniqueIdentifier>{cf9d7803-93ad-49ae-9ee1-9109b94aa55d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Rendering\Text">
+      <UniqueIdentifier>{06ce9e73-3dc2-49b7-9dc9-e19e328ce838}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\External">
+      <UniqueIdentifier>{b3881eb5-b787-40cc-956a-b524846b6001}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\ExternalHeaders\Json">
+      <UniqueIdentifier>{0a1eb568-c1fe-4017-af2d-26fe1d610d16}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\ExternalHeaders\FontCache">
+      <UniqueIdentifier>{5cf92ca2-a75c-4a83-af0f-26edd3be4f74}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h">
@@ -143,9 +158,6 @@
     </ClInclude>
     <ClInclude Include="ServiceLocator.h">
       <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="json.hpp">
-      <Filter>Header Files\ExternalHeaders</Filter>
     </ClInclude>
     <ClInclude Include="Grid.h">
       <Filter>Header Files\Grid</Filter>
@@ -215,6 +227,24 @@
     </ClInclude>
     <ClInclude Include="ObjectPool.h">
       <Filter>Header Files\ObjectPool</Filter>
+    </ClInclude>
+    <ClInclude Include="GameObjectManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FileManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Font.h">
+      <Filter>Header Files\Rendering\Text</Filter>
+    </ClInclude>
+    <ClInclude Include="json.hpp">
+      <Filter>Header Files\ExternalHeaders\Json</Filter>
+    </ClInclude>
+    <ClInclude Include="External\SDL_FontCache.h">
+      <Filter>Header Files\ExternalHeaders\FontCache</Filter>
+    </ClInclude>
+    <ClInclude Include="TextManager.h">
+      <Filter>Header Files\Rendering\Text</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -322,6 +352,21 @@
     </ClCompile>
     <ClCompile Include="Editable.cpp">
       <Filter>Source Files\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="GameObjectManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FileManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Font.cpp">
+      <Filter>Source Files\Rendering\Text</Filter>
+    </ClCompile>
+    <ClCompile Include="External\SDL_FontCache.c">
+      <Filter>Source Files\External</Filter>
+    </ClCompile>
+    <ClCompile Include="TextManager.cpp">
+      <Filter>Source Files\Rendering\Text</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

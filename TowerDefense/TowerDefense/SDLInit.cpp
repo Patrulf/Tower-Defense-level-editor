@@ -14,10 +14,14 @@ SDLInit::SDLInit()
 	{
 		throw std::runtime_error(SDL_GetError());
 	}
+	if (TTF_Init() != 0) {
+		throw std::runtime_error(TTF_GetError());
+	}
 }
 
 
 SDLInit::~SDLInit()
 {
+	TTF_Quit();
 	SDL_Quit();
 }

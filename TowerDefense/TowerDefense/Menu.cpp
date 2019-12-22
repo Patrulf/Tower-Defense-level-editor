@@ -42,35 +42,30 @@ void Menu::Draw() {
 }
 
 void Menu::NavigateMenu() {
-	//this whole function should probably be improved upon.
-
-	//Todo: we should make use of the command->execute.
-	//also in inputmanager, releasing of key should not count as input here.
 	if ((int)buttons.size() > 0) {
-		Command* moveUp = inputManager->HandleKeyboardInput(SDL_SCANCODE_UP);		
+		Command* moveUp = inputManager->HandleKeyboardInput(SDL_SCANCODE_UP, true);
+
 		if (moveUp != nullptr) {
 			buttons[selectedButtonIndex]->SetSelected(false);
-			selectedButtonIndex++;
-
-			if (selectedButtonIndex >= (int)buttons.size() - 1) {
-				selectedButtonIndex = 0;
-				buttons[selectedButtonIndex]->SetSelected(true);
+			selectedButtonIndex--;
+			if (selectedButtonIndex < 0) {
+				selectedButtonIndex = buttons.size() - 1;				
 			}
+			buttons[selectedButtonIndex]->SetSelected(true);
 		}
-
-		Command* moveDown = inputManager->HandleKeyboardInput(SDL_SCANCODE_DOWN);		
+		Command* moveDown = inputManager->HandleKeyboardInput(SDL_SCANCODE_DOWN, true);		
+		if (moveDown == nullptr)
+			moveDown = inputManager->HandleKeyboardInput(SDL_SCANCODE_TAB, true);
 		if (moveDown != nullptr) {
 			buttons[selectedButtonIndex]->SetSelected(false);
-			selectedButtonIndex--;
-			if ((int)selectedButtonIndex <= 0) {
-				selectedButtonIndex = buttons.size() - 1;
-				buttons[selectedButtonIndex]->SetSelected(true);
+			selectedButtonIndex++;
+			if (selectedButtonIndex >= static_cast<int>(buttons.size() )) {
+				selectedButtonIndex = 0;
 			}
+			buttons[selectedButtonIndex]->SetSelected(true);
 		}
-		
-		//we quit the game, even when other one is selected?
 		Command* enter = nullptr;
-		for (int i = 0; i < buttons.size(); i++) {
+		for (int i = 0; i < static_cast<int>(buttons.size()); i++) {
 			int mouseX;
 			int mouseY;
 			SDL_GetMouseState(&mouseX, &mouseY);
@@ -82,9 +77,9 @@ void Menu::NavigateMenu() {
 				buttons[selectedButtonIndex]->SetSelected(true);
 
 				enter = inputManager->HandleMouseInput(SDL_BUTTON_LEFT);
-				if (enter == nullptr)
-					enter = inputManager->HandleKeyboardInput(SDL_SCANCODE_RETURN);
 			}
+			if (enter == nullptr)
+				enter = inputManager->HandleKeyboardInput(SDL_SCANCODE_RETURN, true);
 		}
 
 		if (enter != nullptr) {
